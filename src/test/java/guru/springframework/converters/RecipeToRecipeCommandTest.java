@@ -2,10 +2,11 @@ package guru.springframework.converters;
 
 import guru.springframework.commands.RecipeCommand;
 import guru.springframework.domain.*;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
 
 public class RecipeToRecipeCommandTest {
 
@@ -25,7 +26,7 @@ public class RecipeToRecipeCommandTest {
     public static final String NOTES_ID = "9";
     RecipeToRecipeCommand converter;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         converter = new RecipeToRecipeCommand(
                 new CategoryToCategoryCommand(),
